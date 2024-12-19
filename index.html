@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Carousel Example
+{% endblock title %}
+
+{% block body %}
+<div class="container-fluid my-4 p-0">
+    <!-- Carousel Section -->
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'cake3.png' %}" alt="Cake 3" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'cake2.png' %}" alt="Cake 2" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'cake1.png' %}" alt="Cake 1" class="d-block w-100">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!-- Shop Introduction Section -->
+<div class="container my-5">
+    <div class="row text-center">
+        <div class="col">
+            <h2>Welcome to Bhumika Cakes</h2>
+            <p class="lead">
+                At Bhumika Cakes, we craft delicious, high-quality cakes and cupcakes that bring joy to your special moments. 
+                From birthdays to weddings, every treat is baked with love and perfection.
+            </p>
+            <p>
+                Visit us to explore a variety of delightful flavors and customized creations tailored just for you. 
+                Whether you're looking for a classic chocolate cake or a special themed creation, 
+                we have something to satisfy every sweet craving!
+            </p>
+            <a href="/about" class="btn btn-custom btn-lg">Learn More About Us</a>
+        </div>
+    </div>
+</div>
+
+<style>
+  /* Background Theme */
+  body {
+      background: linear-gradient(to right, #f7d4e3, #e2a8d3, #dba8f4);
+      color: #4e003e;
+      font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful cake-shop style */
+  }
+
+  .carousel-inner img {
+      width: 100%; /* Full width */
+      height: 50vh; /* Half viewport height */
+      object-fit: cover; /* Crop to fit carousel */
+      border-radius: 10px; /* Rounded corners for soft aesthetic */
+  }
+
+  /* Custom Button Style */
+  .btn-custom {
+      background-color: #ff6fb7; /* Light pink for the button */
+      color: #fff;
+      border-radius: 30px;
+      padding: 12px 25px;
+      text-transform: uppercase;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Soft button shadow */
+  }
+
+  .btn-custom:hover {
+      background-color: #f5008e; /* Vibrant pink on hover */
+      transform: translateY(-2px); /* Slight lift effect */
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+
+  h2 {
+      color: #9e007e; /* Vibrant purple for heading */
+  }
+
+  p.lead {
+      color: #720056; /* Darker purple for primary text */
+  }
+
+  p {
+      color: #4e003e; /* Deep purple for normal text */
+  }
+</style>
+
+{% endblock body %}
