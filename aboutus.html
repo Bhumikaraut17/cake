@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+About Us
+{% endblock title %}
+
+{% block body %}
+<!-- About Us Section -->
+<div class="about-us-section text-white" style="background: url('{% static "background1.png" %}') no-repeat center center / cover; height: 100vh; background-attachment: fixed;">
+    <div class="container d-flex flex-column justify-content-center align-items-center h-100">
+        <h1 class="display-4 fw-bold text-center">Welcome to Bhumika Cakes</h1>
+        <p class="lead text-center mt-4">
+            At Bhumika Cakes, we believe that every cake tells a story. Our passion is creating beautifully crafted 
+            cakes, cupcakes, and desserts that bring smiles to faces and make celebrations unforgettable. From birthdays 
+            to weddings and everything in between, we add sweetness to every moment.
+        </p>
+        <p class="text-center">
+            Using the finest ingredients and endless creativity, we ensure each bite is a delicious experience. 
+            Our team of talented bakers and decorators work tirelessly to make your dreams come true.
+        </p>
+        <a href="/contact" class="btn btn-outline-light btn-lg mt-4">Get in Touch</a>
+    </div>
+</div>
+
+<!-- Our Story Section -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static 'background.png' %}" alt="Bhumika Cakes" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h2 class="fw-bold">Our Story</h2>
+            <p>
+                Founded in 2022, Bhumika Cakes started as a small bakery with a big dream — to create extraordinary cakes 
+                that taste as good as they look. Over the years, we’ve grown into a beloved destination for dessert lovers, 
+                known for our attention to detail and unparalleled flavors.
+            </p>
+            <p>
+                Whether you're craving a classic chocolate cake, a personalized creation, or seasonal delights, 
+                we promise to make it with love and care.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Meet Our Team Section -->
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">Meet Our Team</h2>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <img src="{% static 'team_member1.jpg' %}" alt="Team Member 1" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px;">
+            <h5>Bhumika Raut</h5>
+            <p>Founder & Head Baker</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'team_member2.jpg' %}" alt="Team Member 2" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px;">
+            <h5>Krishna Wable</h5>
+            <p>Pastry Chef</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'team_member3.jpg' %}" alt="Team Member 3" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px;">
+            <h5>Radhika Ware</h5>
+            <p>Decorator & Designer</p>
+        </div>
+    </div>
+</div>
+
+<style>
+  .about-us-section {
+      background-attachment: fixed; /* Keeps the background fixed */
+      color: white;
+      background: rgba(0, 0, 0, 0.7); /* Adds a dark overlay for readability */
+      text-shadow: 1px 1px 5px black;
+  }
+  .about-us-section a.btn {
+      transition: 0.3s ease;
+  }
+  .about-us-section a.btn:hover {
+      background-color: white;
+      color: black;
+  }
+</style>
+
+{% endblock body %}

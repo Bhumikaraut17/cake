@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %}
+Contact Us
+{% endblock title %}
+
+{% block body %}
+<div class="container my-5">
+    <h1 class="text-center mb-4">Get in Touch</h1>
+    <form method="POST" action="{% url 'contact' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" id="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" id="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea name="message" id="message" class="form-control" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-custom">Submit</button>
+    </form>
+</div>
+
+<style>
+  /* Form container styling */
+  form {
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      background-color: #ffe4f3; /* Light pink background */
+  }
+
+  h1 {
+      color: #8b008b; /* Deep violet for the heading */
+      font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun and inviting font */
+  }
+
+  /* Form fields styling */
+  .form-label {
+      font-weight: bold;
+      color: #720056; /* Vibrant purple */
+  }
+
+  input, textarea {
+      border: 1px solid #dba8f4; /* Light purple border */
+      border-radius: 8px;
+  }
+
+  input:focus, textarea:focus {
+      outline: none;
+      border-color: #ff6fb7; /* Light pink focus effect */
+      box-shadow: 0 0 5px rgba(255, 111, 183, 0.6); /* Soft pink glow */
+  }
+
+  /* Button styling */
+  .btn-custom {
+      background-color: #ff6fb7; /* Light pink for the button */
+      color: #fff;
+      border-radius: 20px;
+      padding: 10px 25px;
+      font-size: 1em;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+      border: none;
+  }
+
+  .btn-custom:hover {
+      background-color: #f5008e; /* Vibrant pink on hover */
+      transform: translateY(-2px); /* Lift effect */
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  }
+</style>
+{% endblock body %}
